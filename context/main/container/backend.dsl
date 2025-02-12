@@ -1,5 +1,5 @@
 backend = container "Backend" {
-    description "Provide API for the mobile frontend"
+    description "Provide service for the mobile frontend"
     technology "Supabase"
 
     backendAuth = component "Backend Auth" {
