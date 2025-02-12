@@ -4,9 +4,6 @@ mainSystem = softwareSystem "Londri System" {
     // Mobile Application container
     !include container/mobile.dsl
     
-    // Web Application container
-    !include container/web.dsl
-    
     // Backend container
     !include container/backend.dsl
     

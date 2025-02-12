@@ -1,5 +1,5 @@
 database = container "Database" {
-    description "Stores all data for the application."
+    description "Store all data"
     technology "PostgreSQL"
 
     bookTable = component "books" {
