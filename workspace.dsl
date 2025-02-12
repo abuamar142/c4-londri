@@ -1,5 +1,5 @@
 workspace {
-    name "c4-londri"
+    name "Londri System"
     description "This is C4 Model for Londri System"
 
     model {
