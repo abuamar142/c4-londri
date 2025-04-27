@@ -1,4 +1,3 @@
-superAdmin -> mobileSplash
 admin -> mobileSplash
 user -> mobileSplash
 
@@ -11,7 +10,7 @@ mobileLogin -> mobileHome
 
 mobileHome -> mobileSplash
 
-mobileLogin -> backendAuth
-mobileRegister -> backendAuth
+mobileLogin -> backendAuthentication
+mobileRegister -> backendAuthentication
 
-backendAuth -> databaseAuth
+backendAuthentication -> databaseAuth

@@ -1,6 +1,6 @@
 workspace {
-    name "Londri System"
-    description "This is C4 Model for Londri System"
+    name "Londri Sistem"
+    description "C4 Model untuk Londri Sistem, sebuah aplikasi mobile manajemen laundry."
 
     model {
         // People (Users)

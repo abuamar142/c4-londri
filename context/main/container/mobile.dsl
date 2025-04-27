@@ -1,20 +1,41 @@
-mobile = container "Mobile Frontend" {
-    description "Mobile platform for manage users, transactions, service, and customers"
+mobile = container "Mobile Application" {
+    description "A mobile application used by Admins and Users to manage transactions, customers, and print receipts."
     technology "Flutter and Dart"
-    
+
     mobileSplash = component "Splash Screen" {
-        description "Screen for splash"
+        description "Displays the application logo on startup."
     }
-    
+
     mobileLogin = component "Login Screen" {
-        description "Screen for login"
+        description "Page for user login."
     }
 
     mobileRegister = component "Register Screen" {
-        description "Screen for register"
+        description "Page for staff to register into the system."
     }
 
     mobileHome = component "Home Screen" {
-        description "Screen for home"
+        description "Main page with access to features based on user roles."
     }
+
+    mobileCustomer = component "Customer Management Screen" {
+        description "Feature to view, add, edit, and delete customer data."
+    }
+
+    mobileTransaction = component "Transaction Management Screen" {
+        description "Feature to record transactions, manage laundry status, and print receipts."
+    }
+
+    mobileReport = component "Financial Report Screen" {
+        description "Feature for admins to view financial reports and export them to PDF."
+    }
+
+    mobilePrint = component "Print Receipt Screen" {
+        description "Screen to print laundry receipts for customers. Available to all users."
+    }
+    
+    mobileSettings = component "Settings Screen" {
+        description "Page to configure user and application preferences."
+    }
+
 }

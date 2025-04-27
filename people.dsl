@@ -1,11 +1,7 @@
-superAdmin = person "Super Admin" {
-    description "Higest level of User"
-}
-
 admin = person "Admin" {
-    description "User who has a business"
+    description "The owner or manager of the laundry business who has full access to manage data and transactions."
 }
 
 user = person "User" {
-    description "Staff of the admin"
+    description "An employee at the laundry place responsible for recording transactions and serving customers."
 }

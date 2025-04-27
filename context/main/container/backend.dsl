@@ -1,24 +1,12 @@
 backend = container "Backend" {
-    description "Provide service for the mobile frontend"
+    description "The backend is provided by Supabase. The services used are user authentication and data management in the PostgreSQL database."
     technology "Supabase"
 
-    backendAuth = component "Backend Auth" {
-        description "Provide authentication service"
-    }
-    
-    backendUser = component "Backend User" {
-        description "Provide user management service"
+    backendAuthentication = component "Backend Authentication" {
+        description "Provides user authentication services for login, registration, and RBAC implementation."
     }
 
-    backendCustomer = component "Backend Customer" {
-        description "Provide customer management service"
+    backendPostgresDatabase = component "Backend Postgres Database" {
+        description "Manages data storage using the PostgreSQL database."
     }
-
-    backendService = component "Backend Service" {
-        description "Provide service management service"
-    }
-
-    backendTransaction = component "Backend Transaction" {
-        description "Provide transaction management service"
-    }
-}
+} 

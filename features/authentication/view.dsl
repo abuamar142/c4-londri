@@ -1,15 +1,14 @@
 dynamic mobile {
     title "Login"
 
-    superAdmin -> mobileSplash "Access screen"
     admin -> mobileSplash "Access screen"
     user -> mobileSplash "Access screen"
 
     mobileSplash -> mobileLogin "Navigate to login"
 
-    mobileLogin -> backendAuth "Request login"
+    mobileLogin -> backendAuthentication "Request login"
 
-    backendAuth -> databaseAuth "Check login"
+    backendAuthentication -> databaseAuth "Check login"
 
     mobileLogin -> mobileHome "Navigate to home"
 
@@ -19,21 +18,22 @@ dynamic mobile {
 dynamic mobile {
     title "Register User"
 
+    admin -> mobileSplash "Access screen"
     user -> mobileSplash "Access screen"
 
     mobileSplash -> mobileLogin "Navigate to login"
 
     mobileLogin -> mobileRegister "Navigate to register"
 
-    mobileRegister -> backendAuth "Request register"
+    mobileRegister -> backendAuthentication "Request register"
 
-    backendAuth -> databaseAuth "Check register"
+    backendAuthentication -> databaseAuth "Check register"
 
     mobileRegister -> mobileLogin "Navigate to login"
 
-    mobileLogin -> backendAuth "Request login"
+    mobileLogin -> backendAuthentication "Request login"
 
-    backendAuth -> databaseAuth "Check login"
+    backendAuthentication -> databaseAuth "Check login"
 
     mobileLogin -> mobileHome "Navigate to home"
 
