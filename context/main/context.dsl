@@ -1,12 +1,12 @@
-mainSystem = softwareSystem "Londri Sistem" {
-    description "Aplikasi mobile untuk manajemen bisnis laundry, termasuk transaksi, pelanggan, layanan, dan laporan keuangan."
+ssLondri = softwareSystem "Londri System" {
+    description "A mobile application for managing laundry business operations, including transactions, customers, services, and financial reports."
 
-    // Mobile Application container
-    !include container/mobile.dsl
+    // Database container
+    !include container/database.dsl
 
     // Backend container
     !include container/backend.dsl
 
-    // Database container
-    !include container/database.dsl
+    // Mobile Application container
+    !include container/mobile.dsl
 }
