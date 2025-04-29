@@ -10,11 +10,7 @@ dynamic cMobile {
     
     comBackendAuthentication -> comDatabaseUser "Check login credentials"
     
-    comDatabaseUser -> comBackendAuthentication "Return user data"
-    
-    comBackendAuthentication -> comMobileLogin "Return authentication status"
-
-    comMobileLogin -> comMobileHome "Navigate to home screen"
+    comMobileLogin -> comMobileHome "Redirect to home screen on successful login"
 
     autolayout lr
 }
