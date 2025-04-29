@@ -7,9 +7,27 @@ cMobile = container "Mobile Application" {
         tags "Screen"
     }
     
+    comMobileTransactionManagement = component "Transaction Management Screen" {
+        description "Screen for managing transactions and managing laundry status."
+        tags "Screen"
+
+        -> comBackendPostgresDatabase "Use supabase service to manage a transaction"
+    }
+    
+    comMobileTransaction = component "Show Transaction Screen" {
+        description "Screen for viewing transactions."
+        tags "Screen"
+
+        -> comMobileTransactionManagement "Access transaction management screen"
+
+        -> comBackendPostgresDatabase "Use supabase service to get transactions"
+    }
+    
     comMobileHome = component "Home Screen" {
         description "Main screen showing recap of transactions and access to features based on user roles."
         tags "Screen"
+
+        -> comMobileTransaction
     }
 
     comMobileRegister = component "Register Screen" {
@@ -23,8 +41,8 @@ cMobile = container "Mobile Application" {
         description "Screen for admin and user login with email and password."
         tags "Screen"
         
-        -> comMobileHome
-        -> comMobileRegister
+        -> comMobileHome "Navigates to Home Screen"
+        -> comMobileRegister "Navigates to Register Screen"
 
         -> comBackendAuthentication
     }
@@ -48,11 +66,6 @@ cMobile = container "Mobile Application" {
         description "Displays the application logo on startup."
         tags "Screen"
         
-        -> comMobileLogin
-    }
-    
-    comMobileTransaction = component "Transaction Management Screen" {
-        description "Screen for managing transactions and managing laundry status."
-        tags "Screen"
+        -> comMobileLogin "Navigates to Login Screen"
     }
 }

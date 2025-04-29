@@ -12,7 +12,7 @@ cDatabase = container "Database" {
         tags "Table"
     }
 
-    comDatabaseTransaction = component "Database Transaction" {
+    comDatabaseTransactions = component "Database Transactions" {
         description "Contains transaction data"
         tags "Table"
     }
