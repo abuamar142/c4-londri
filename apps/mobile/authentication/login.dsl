@@ -8,7 +8,7 @@ dynamic cMobile {
     comMobileSplash -> comMobileLogin "Navigate to login screen"
     comMobileLogin -> comBackendAuthentication "Request login with email and password"
     
-    comBackendAuthentication -> comDatabaseUsers "Check login credentials"
+    comBackendAuthentication -> comDatabaseAuth "Check login credentials"
     
     comMobileLogin -> comMobileHome "Redirect to home screen on successful login"
 

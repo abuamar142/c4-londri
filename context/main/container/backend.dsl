@@ -6,6 +6,7 @@ cBackend = container "Backend" {
         description "Provides user authentication services for login and registration."
         tags "Service"
 
+        -> comDatabaseAuth
         -> comDatabaseUsers
     }
 
