@@ -6,7 +6,7 @@ cBackend = container "Backend" {
         description "Provides user authentication services for login and registration."
         tags "Service"
 
-        -> comDatabaseUser
+        -> comDatabaseUsers
     }
 
     comBackendPostgresDatabase = component "Backend Postgres Database" {
@@ -14,6 +14,8 @@ cBackend = container "Backend" {
         tags "Database"
 
         -> comDatabaseTransactions
+        -> comDatabaseUsers
         -> comDatabaseCustomers
+        -> comDatabaseServices
     }
 } 

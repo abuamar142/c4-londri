@@ -17,7 +17,12 @@ cDatabase = container "Database" {
         tags "Table"
     }
 
-    comDatabaseUser = component "Database User" {
+    comDatabaseServices = component "Database Services" {
+        description "Contains service data"
+        tags "Table"
+    }
+
+    comDatabaseUsers = component "Database Users" {
         description "Contains user data"
         tags "Table"
     }

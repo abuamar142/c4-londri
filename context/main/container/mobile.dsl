@@ -22,16 +22,16 @@ cMobile = container "Mobile Application" {
         description "Screen for managing transactions and managing laundry status."
         tags "Screen"
 
-        -> comBackendPostgresDatabase "Use supabase service to manage a transaction"
+        -> comBackendPostgresDatabase
     }
     
     comMobileTransaction = component "Show Transaction Screen" {
         description "Screen for viewing transactions."
         tags "Screen"
 
-        -> comMobileTransactionManagement "Access transaction management screen"
+        -> comMobileTransactionManagement "Navigates to Transaction Management Screen"
 
-        -> comBackendPostgresDatabase "Use supabase service to get transactions"
+        -> comBackendPostgresDatabase
     }
     
     comMobileHome = component "Home Screen" {

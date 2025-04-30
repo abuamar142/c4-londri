@@ -8,7 +8,7 @@ dynamic cMobile {
     comMobileLogin -> comMobileRegister "Navigate to register screen"
     comMobileRegister -> comBackendAuthentication "Send registration data to backend"
 
-    comBackendAuthentication -> comDatabaseUser "Store user data in the database"
+    comBackendAuthentication -> comDatabaseUsers "Store user data in the database"
     
     comMobileRegister -> comMobileLogin "Redirect to login screen after registration"
 
