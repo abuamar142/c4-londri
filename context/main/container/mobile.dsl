@@ -1,10 +1,21 @@
 cMobile = container "Mobile Application" {
     description "A mobile application used by Admins and Users to manage transactions, customers, and print receipts."
     technology "Flutter and Dart"
-    
-    comMobileCustomer = component "Customer Management Screen" {
+
+    comMobileCustomerManagement = component "Customer Management Screen" {
         description "Screen for managing customer data."
-        tags "Screen"
+        tags "Screen, Customer"
+
+        -> comBackendPostgresDatabase
+    }
+    
+    comMobileCustomer = component "Show Customers Screen" {
+        description "Screen for viewing customers."
+        tags "Screen, Customer"
+
+        -> comMobileCustomerManagement "Navigates to Customer Management Screen"
+
+        -> comBackendPostgresDatabase
     }
     
     comMobileTransactionManagement = component "Transaction Management Screen" {
@@ -27,7 +38,8 @@ cMobile = container "Mobile Application" {
         description "Main screen showing recap of transactions and access to features based on user roles."
         tags "Screen"
 
-        -> comMobileTransaction
+        -> comMobileTransaction "Navigates to Transaction Screen"
+        -> comMobileCustomer "Navigates to Customer Screen"
     }
 
     comMobileRegister = component "Register Screen" {

@@ -14,5 +14,6 @@ cBackend = container "Backend" {
         tags "Database"
 
         -> comDatabaseTransactions
+        -> comDatabaseCustomers
     }
 } 
