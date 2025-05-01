@@ -5,3 +5,4 @@
 !include employees
 !include report
 !include print
+!include setting
