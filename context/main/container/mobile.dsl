@@ -2,6 +2,13 @@ cMobile = container "Mobile Application" {
     description "A mobile application used by Admins and Users to manage transactions, customers, and print receipts."
     technology "Flutter and Dart"
 
+    comMobilePrintReceipt = component "Print Receipt Screen" {
+        description "Screen for printing receipts and managing print settings."
+        tags "Screen"
+
+        -> comBackendPostgresDatabase "Uses supabase service to get receipt data"
+    }
+
     comMobileReport = component "Report Screen" {
         description "Screen for viewing financial reports and statistics."
         tags "Screen, Report"
@@ -60,6 +67,7 @@ cMobile = container "Mobile Application" {
         tags "Screen"
 
         -> comMobileTransactionManagement "Navigates to Transaction Management Screen"
+        -> comMobilePrintReceipt "Navigates to Print Receipt Screen"
 
         -> comBackendPostgresDatabase
     }
@@ -90,11 +98,6 @@ cMobile = container "Mobile Application" {
         -> comMobileRegister "Navigates to Register Screen"
 
         -> comBackendAuthentication
-    }
-    
-    comMobilePrint = component "Print Receipt Screen" {
-        description "Screen for printing receipts."
-        tags "Screen"
     }
 
     comMobileSettings = component "Settings Screen" {
